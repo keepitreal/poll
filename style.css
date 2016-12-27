@@ -1,0 +1,20 @@
+html, body {
+    counter-reset: section;
+}
+
+ul.options {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.options > li {
+    background-color: #c6c6c6;
+    display: block;
+    width: 0;
+}
+
+ul.options > li:after {
+    counter-increment: section;
+    content: "Option" counter(section);
+}
